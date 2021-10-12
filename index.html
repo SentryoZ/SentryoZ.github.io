@@ -59,7 +59,7 @@
 
 			<div class="content">
 
-				<h1 class="text-intro opacity-0">www.website.com<br></h1>
+				<h1 class="text-intro opacity-0">www.sunlightmc.com<br></h1>
 
 				<p class="text-intro opacity-0">Welcome to the community!</p>
 				<br>
@@ -67,10 +67,11 @@
 				<nav>
 					<ul>
 						<li>
-							<a href="https://yoursite.com/support" class="light-btn text-intro opacity-0">SUPPORT</a>
+							<a href="#" onclick="copyIp()" class="light-btn text-intro opacity-0">COPY IP</a>
+							<input type="text" value="sunlightmc.com" id="myInput" hidden>
 						</li>
 						<li>
-							<a href="https://discord.gg/yourinvite" class="action-btn trigger text-intro opacity-0">DISCORD</a>
+							<a href="https://discord.gg/22Bad9qY" class="action-btn trigger text-intro opacity-0">DISCORD</a>
 						</li>
 					</ul>
 				</nav>
@@ -112,7 +113,15 @@
 	<script src="js/main.js"></script>
 	<script src="js/status.js"></script>
 	
-
+	<script>
+		function copyIp() {
+			let server_ip = document.getElementById("myInput");
+			server_ip.select();
+			server_ip.setSelectionRange(0, 99999);
+			navigator.clipboard.writeText(server_ip.value);
+			alert("Đã copy IP: " + server_ip.value);
+		}
+	</script>
 	</body>
 
 </html>
